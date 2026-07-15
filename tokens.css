@@ -1,13 +1,14 @@
-/* Hallmark · genre: editorial · macrostructure: Photographic · theme: Atelier · enrichment: none (real photography) · nav: N9 · footer: Ft6
- * H6 knobs: image=full-bleed, caption=lower-left · F3 knobs: columns=2, rules=every-row · T3 knobs: face=serif-italic, width=60ch
- * Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 */
+/* Hallmark · genre: editorial · macrostructure: Photographic · theme: Atelier (polish pass 2026-07-15) · enrichment: none (real photography) · nav: N9 · footer: Ft6
+ * H6 knobs: image=inset-plate (was full-bleed), caption=flow-below (was lower-left) · F3 knobs: columns=2, rules=every-row · T3 knobs: face=serif-italic, width=60ch, rule=terracotta-left
+ * Polish deltas: paper warmed to limestone · h2 weight 900→500 · footer Ft6 on umber band · dur-long defined (reveals now animate)
+ * Hallmark · pre-emit critique: P5 H5 E5 S5 R4 V4 */
 
 :root {
-  --color-paper:      oklch(94% 0.005 60);
-  --color-paper-2:    oklch(91% 0.006 60);
-  --color-paper-3:    oklch(87% 0.008 55);
-  --color-rule:       oklch(78% 0.006 55);
-  --color-rule-2:     oklch(56% 0.008 50);
+  --color-paper:      oklch(96% 0.013 78);
+  --color-paper-2:    oklch(93% 0.015 76);
+  --color-paper-3:    oklch(89% 0.018 74);
+  --color-rule:       oklch(80% 0.014 72);
+  --color-rule-2:     oklch(58% 0.014 60);
   --color-muted:      oklch(46% 0.010 50);
   --color-neutral:    oklch(28% 0.014 45);
   --color-ink-2:      oklch(18% 0.020 40);
@@ -18,6 +19,10 @@
   --color-scrim:      oklch(12% 0.024 40 / 0.55);
   --color-terracotta: oklch(55% 0.135 42);
   --color-terracotta-ink: oklch(48% 0.135 42);
+  --color-footer:     oklch(23% 0.028 48);
+  --color-cream:      oklch(93% 0.020 80);
+  --color-cream-2:    oklch(74% 0.020 75);
+  --color-selection:  oklch(87% 0.055 60);
 
   --font-display: "Playfair Display", "Cormorant Garamond", ui-serif, Georgia, serif;
   --font-body:    "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -61,4 +66,5 @@
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --dur-micro: 120ms;
   --dur-short: 220ms;
+  --dur-long:  620ms;
 }

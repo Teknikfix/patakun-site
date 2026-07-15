@@ -1,9 +1,17 @@
-/* Hallmark · genre: editorial · macrostructure: Photographic · theme: Atelier · enrichment: none (real photography) · nav: N9 · footer: Ft6 */
+/* Hallmark · genre: editorial · macrostructure: Photographic · theme: Atelier (polish pass 2026-07-15) · enrichment: none (real photography) · nav: N9 · footer: Ft6 */
 @import url("tokens.css");
 
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body { overflow-x: clip; }
+
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+}
+
+::selection { background: var(--color-selection); }
+
+section[id] { scroll-margin-top: var(--space-lg); }
 
 body {
   margin: 0;
@@ -25,7 +33,10 @@ h1, h2, h3 {
   overflow-wrap: anywhere;
   min-width: 0;
   margin: 0;
+  text-wrap: balance;
 }
+
+h2 { font-weight: 500; }
 
 a { color: var(--color-ink); }
 
@@ -108,8 +119,13 @@ button:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to top, rgba(18, 13, 10, 0.82) 0%, rgba(18, 13, 10, 0.30) 42%, rgba(18, 13, 10, 0.10) 70%),
-    linear-gradient(to bottom, rgba(18, 13, 10, 0.38) 0%, rgba(18, 13, 10, 0) 24%);
+    linear-gradient(to top,
+      rgba(18, 13, 10, 0.84) 0%,
+      rgba(18, 13, 10, 0.54) 20%,
+      rgba(18, 13, 10, 0.26) 44%,
+      rgba(18, 13, 10, 0.09) 66%,
+      rgba(18, 13, 10, 0) 88%),
+    linear-gradient(to bottom, rgba(18, 13, 10, 0.40) 0%, rgba(18, 13, 10, 0) 26%);
 }
 
 .hero__overlay {
@@ -145,6 +161,7 @@ button:focus-visible {
   line-height: var(--lh-normal);
   color: rgba(255, 255, 255, 0.9);
   margin: var(--space-lg) 0 var(--space-xl);
+  text-wrap: pretty;
 }
 
 .hero__cta {
@@ -213,30 +230,38 @@ button:focus-visible {
 
 .link-cta:active { color: var(--color-terracotta); }
 
-/* ── Photo folds · H6 ──────────────────────────────────────── */
+/* ── Photo folds · H6 (polish: inset atelier plates) ───────── */
 
-.photo-fold { position: relative; }
+.photo-fold {
+  max-width: 88rem;
+  margin-inline: auto;
+  padding-inline: var(--page-gutter);
+}
 
 .photo-fold img {
   width: 100%;
-  height: min(82dvh, 46rem);
+  height: min(78dvh, 44rem);
   object-fit: cover;
 }
 
 .photo-fold--tall img { height: min(88dvh, 52rem); }
 
 .photo-fold .caption {
-  position: absolute;
-  bottom: var(--space-md);
-  left: var(--page-gutter);
+  display: flex;
+  align-items: baseline;
+  gap: 0.7em;
   margin: 0;
-  padding: var(--space-xs) var(--space-sm);
-  background: var(--color-scrim);
-  color: var(--color-paper);
+  padding: var(--space-sm) 0 0;
+  color: var(--color-muted);
   font-family: var(--font-label);
   font-size: var(--text-xs);
   letter-spacing: var(--tracking-label);
   text-transform: uppercase;
+}
+
+.photo-fold .caption::before {
+  content: "—";
+  color: var(--color-terracotta);
 }
 
 /* ── Text folds ────────────────────────────────────────────── */
@@ -263,6 +288,15 @@ button:focus-visible {
 .head-hang { padding-block: var(--space-3xl) var(--space-xl); }
 
 .head-hang h2 { font-size: var(--text-display-s); max-width: 20ch; }
+
+.head-hang h2::before {
+  content: "";
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--color-terracotta);
+  margin-bottom: var(--space-lg);
+}
 
 /* ── Spec sheet · F3 ───────────────────────────────────────── */
 
@@ -532,7 +566,7 @@ button:focus-visible {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-sm);
+  gap: var(--space-md);
 }
 
 .gtile {
@@ -548,9 +582,10 @@ button:focus-visible {
   transition: transform var(--dur-long) var(--ease-out);
 }
 
-.gtile:hover img { transform: scale(1.05); }
+.gtile:hover img { transform: scale(1.04); }
 
 .gallery .wide { grid-column: span 2; }
+.gallery .wide img { aspect-ratio: 16 / 10; }
 
 /* ── In-page reel ──────────────────────────────────────────── */
 
@@ -664,6 +699,8 @@ button:focus-visible {
   font-size: var(--text-lg);
   line-height: var(--lh-relaxed);
   color: var(--color-ink-2);
+  border-left: 2px solid var(--color-terracotta);
+  padding-left: var(--space-xl);
 }
 
 .review__by {
@@ -698,7 +735,7 @@ button:focus-visible {
   width: 100%;
   aspect-ratio: 4 / 3;
   border: var(--rule-hairline) solid var(--color-rule-2);
-  filter: saturate(0.85) contrast(1.02);
+  filter: saturate(0.82) contrast(1.02) sepia(0.08);
 }
 
 .gh-maplink { align-self: flex-start; font-size: var(--text-sm); }
@@ -743,8 +780,8 @@ button:focus-visible {
 /* ── Footer · Ft6 letter close ─────────────────────────────── */
 
 .foot-letter {
-  padding: var(--space-3xl) var(--page-gutter) var(--space-2xl);
-  border-top: var(--rule-hairline) solid var(--color-rule);
+  padding: var(--space-3xl) var(--page-gutter);
+  background: var(--color-footer);
   margin-top: var(--space-3xl);
 }
 
@@ -758,13 +795,14 @@ button:focus-visible {
   line-height: var(--lh-normal);
   max-width: 40ch;
   margin: 0;
+  color: var(--color-cream);
 }
 
-.foot-letter__sign { font-style: normal; font-weight: 700; }
+.foot-letter__sign { font-style: normal; font-weight: 700; color: var(--color-paper); }
 
 .foot-letter__ps {
   font-size: var(--text-sm);
-  color: var(--color-muted);
+  color: var(--color-cream-2);
   margin: var(--space-lg) 0 0;
 }
 
@@ -778,6 +816,7 @@ button:focus-visible {
 
 @media (max-width: 40rem) {
   .photo-fold img { height: min(60dvh, 30rem); }
+  .review__body { padding-left: var(--space-lg); }
   .gallery { grid-template-columns: minmax(0, 1fr); }
   .gallery .wide { grid-column: auto; }
   .nav-edge { min-height: 44px; }
