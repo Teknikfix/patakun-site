@@ -614,8 +614,9 @@ button:focus-visible {
   position: absolute; inset: 0;
   opacity: 0; transition: opacity 900ms ease;
   margin: 0;
+  pointer-events: none;
 }
-.rslide.on { opacity: 1; }
+.rslide.on { opacity: 1; pointer-events: auto; }
 
 .rslide img {
   position: absolute; inset: 0;
