@@ -1,0 +1,64 @@
+/* Hallmark · genre: editorial · macrostructure: Photographic · theme: Atelier · enrichment: none (real photography) · nav: N9 · footer: Ft6
+ * H6 knobs: image=full-bleed, caption=lower-left · F3 knobs: columns=2, rules=every-row · T3 knobs: face=serif-italic, width=60ch
+ * Hallmark · pre-emit critique: P4 H5 E4 S5 R5 V4 */
+
+:root {
+  --color-paper:      oklch(94% 0.005 60);
+  --color-paper-2:    oklch(91% 0.006 60);
+  --color-paper-3:    oklch(87% 0.008 55);
+  --color-rule:       oklch(78% 0.006 55);
+  --color-rule-2:     oklch(56% 0.008 50);
+  --color-muted:      oklch(46% 0.010 50);
+  --color-neutral:    oklch(28% 0.014 45);
+  --color-ink-2:      oklch(18% 0.020 40);
+  --color-ink:        oklch(12% 0.024 40);
+  --color-accent:     oklch(22% 0.060 40);
+  --color-accent-ink: oklch(45% 0.13 60);
+  --color-focus:      oklch(45% 0.13 60);
+  --color-scrim:      oklch(12% 0.024 40 / 0.55);
+  --color-terracotta: oklch(55% 0.135 42);
+  --color-terracotta-ink: oklch(48% 0.135 42);
+
+  --font-display: "Playfair Display", "Cormorant Garamond", ui-serif, Georgia, serif;
+  --font-body:    "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-label:   "IBM Plex Mono", ui-monospace, monospace;
+
+  --display-weight: 900;
+
+  --text-display:   clamp(2.75rem, 5.5vw + 1rem, 6.25rem);
+  --text-display-s: clamp(1.875rem, 4vw + 0.5rem, 4rem);
+  --text-xl:  1.375rem;
+  --text-lg:  1.125rem;
+  --text-md:  1rem;
+  --text-sm:  0.875rem;
+  --text-xs:  0.8125rem;
+
+  --tracking-display: -0.018em;
+  --tracking-label:   0.24em;
+
+  --lh-tight:   1.0;
+  --lh-snug:    1.16;
+  --lh-normal:  1.55;
+  --lh-relaxed: 1.7;
+
+  --space-xs:  0.25rem;
+  --space-sm:  0.5rem;
+  --space-md:  1rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2.5rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6.5rem;
+
+  --measure: 56ch;
+  --page-max: 64rem;
+  --page-gutter: clamp(1rem, 4vw, 2.5rem);
+
+  --rule-hairline: 1px;
+  --radius-none: 0;
+
+  --ease-out:    cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:     cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-micro: 120ms;
+  --dur-short: 220ms;
+}
