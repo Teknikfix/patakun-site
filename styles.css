@@ -11,6 +11,8 @@ html, body { overflow-x: clip; }
 
 ::selection { background: var(--color-selection); }
 
+a, button, input, textarea, select { touch-action: manipulation; }
+
 section[id] { scroll-margin-top: var(--space-lg); }
 
 body {
@@ -421,6 +423,7 @@ button:focus-visible {
   border-radius: var(--radius-none);
   padding: 0.7em 0.8em;
   width: 100%;
+  min-height: 44px;
   transition: border-color var(--dur-short) var(--ease-out),
               background var(--dur-short) var(--ease-out);
 }
@@ -510,7 +513,12 @@ button:focus-visible {
   color: var(--color-ink-2);
 }
 
-.midcta__link { font-size: var(--text-lg); }
+.midcta__link {
+  font-size: var(--text-lg);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 
 /* ── Sticky mobile booking bar ─────────────────────────────── */
 
@@ -657,7 +665,8 @@ button:focus-visible {
 
 .reel-replay {
   position: absolute; bottom: 14px; right: 14px; z-index: 5;
-  width: 40px; height: 40px; border-radius: 50%;
+  display: grid; place-items: center;
+  width: 44px; height: 44px; border-radius: 50%;
   border: 1px solid rgba(246,241,234,.5); background: rgba(10,7,5,.4);
   color: var(--color-paper); cursor: pointer;
   font-size: 13px; opacity: 0; transition: opacity 300ms ease;
@@ -739,7 +748,13 @@ button:focus-visible {
   filter: saturate(0.82) contrast(1.02) sepia(0.08);
 }
 
-.gh-maplink { align-self: flex-start; font-size: var(--text-sm); }
+.gh-maplink {
+  align-self: flex-start;
+  font-size: var(--text-sm);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
 
 .gh-dist { margin: 0; }
 
